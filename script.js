@@ -33,13 +33,13 @@ function generateNewForecast() {
 }
 
 function addForecast() {
-    let title1 = title.textContent;
-    let percent1 = percent.textContent;
+    let predict = title.textContent;
+    let probability = percent.textContent;
     const myCard = cardTemplate.content.cloneNode(true);
-    myCard.querySelector("h3").textContent = title1;
-    myCard.querySelector("p").textContent = percent1;
+    myCard.querySelector("h3").textContent = predict;
+    myCard.querySelector("p").textContent = probability;
 
-    if (!title1 || !percent1) {
+    if (!predict || !probability) {
         return;
     }
     forecastsList.append(myCard);
